@@ -1,0 +1,153 @@
+body {
+  background: rgb(23,23,23);
+background: linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(18,18,18,1) 50%, rgba(33,33,33,1) 100%);
+}
+
+.card-img {
+  padding-top: 3%;
+}
+
+#photo-profile {
+  border-radius: 10%;
+  height: 300px;
+  width: 300px;
+}
+
+.main-div {
+  text-align: center;
+}
+
+.big-title {
+  font-family: "Bitter", serif;
+  color: #E3E3E3;
+  font-size: 4.3em;
+}
+
+.big-title:hover {
+  font-family: "Bitter", serif;
+  color: #ffffff;
+}
+
+.medium-title {
+  font-family: "Bitter", serif;
+  color: #E3E3E3;
+  font-size: 3em;
+}
+
+.paragraphe {
+  font-family: "Open Sans", sans-serif;
+  color: #E3E3E3;
+  font-size: 2em;
+}
+
+.list-inline {
+  list-style: none;
+    padding-left: 0%;
+}
+
+.list-inline > li{
+  display: inline;
+  padding: 10px;
+  font-size: 50px;
+}
+
+.links:hover {
+  transform: scale(1.5);
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* L'effet de frappe */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* L'effet de curseur de machine à écrire */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 8, 0); }
+}
+
+.last-name {
+  border-right: .15em solid orange; /* Le curseur de machine à écrire */
+  animation:
+    typing 3.5s steps(40, end) forwards, /* Utilisation de "forwards" pour conserver l'état final de l'animation */
+    blink-caret .75s step-end infinite;
+  white-space: nowrap; /* Empêcher le texte de passer à la ligne pendant l'animation */
+  overflow: hidden; /* Masquer le texte qui dépasse */
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(23,23,23);
+  background: linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(18,18,18,1) 50%, rgba(33,33,33,1) 100%);
+}
+
+.stars:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  box-shadow:
+    100px 200px white,
+    200px 500px white,
+    300px 100px white,
+    400px 400px white,
+    500px 800px white,
+    600px 300px white,
+    700px 700px white,
+    800px 200px white,
+    900px 600px white,
+    1000px 900px white;
+  animation: animateStars 30s linear infinite;
+}
+
+@keyframes animateStars {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  /* Pour un écran < 960px, cette classe CSS s'applique */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Pour un écran < 720px, cette classe CSS s'applique */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* Pour un écran < 540px, cette classe CSS s'applique */
+  .container {
+    width: 300px;
+  }
+}
